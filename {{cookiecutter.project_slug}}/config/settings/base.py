@@ -74,7 +74,7 @@ THIRD_PARTY_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
-{%- if cookiecutter.use_restapi %}
+{%- if cookiecutter.use_restapi == 'y' %}
     'djoser',
     "rest_framework",
 {%- endif %}

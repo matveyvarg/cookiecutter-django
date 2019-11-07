@@ -34,7 +34,7 @@ django-compressor = "2.3"
 {%- endif %}
 django-redis = "4.10.0"
 
-{%- if cookiecutter.use_restapi %}
+{%- if cookiecutter.use_restapi == "y %}
 # Django REST Framework
 djangorestframework = "3.10.3"
 coreapi = "2.3.3"
