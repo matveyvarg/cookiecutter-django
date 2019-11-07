@@ -74,7 +74,10 @@ THIRD_PARTY_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+{%- if cookiecutter.use_restapi %}
+    'djoser',
     "rest_framework",
+{%- endif %}
 {%- if cookiecutter.use_celery == 'y' %}
     "django_celery_beat",
 {%- endif %}

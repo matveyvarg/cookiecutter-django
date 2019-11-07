@@ -15,6 +15,9 @@ urlpatterns = [
     # User management
     path("users/", include("{{ cookiecutter.project_slug }}.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
+{%- if cookiecutter.use_restapi %}
+    url(r'^auth/', include('djoser.urls')),
+{%- endif %}
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
