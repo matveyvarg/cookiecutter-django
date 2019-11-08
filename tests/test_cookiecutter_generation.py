@@ -4,9 +4,19 @@ import re
 import pytest
 from cookiecutter.exceptions import FailedHookException
 from pytest_cases import pytest_fixture_plus
-import sh
 import yaml
 from binaryornot.check import is_binary
+
+try:
+    import sh
+except ImportError:
+    # fallback: emulate the sh API with pbs
+    import pbs
+    class Sh(object):
+        def __getattr__(self, attr):
+            return pbs.Command(attr)
+    sh = Sh()
+
 
 PATTERN = r"{{(\s?cookiecutter)[.](.*?)}}"
 RE_OBJ = re.compile(PATTERN)
