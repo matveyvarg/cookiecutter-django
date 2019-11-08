@@ -11,11 +11,11 @@ pytz = "2019.3"
 python-slugify ="4.0.0"
 Pillow = "6.2.1"
 {%- if cookiecutter.use_compressor == "y" %}
-rcssmin = 1.0.6
+rcssmin = "1.0.6"
 {%- endif %}
 argon2-cffi = "19.2.0"
 {%- if cookiecutter.use_whitenoise == 'y' %}
-whitenoise==4.1.4  
+whitenoise = "4.1.4"  
 {%- endif %}
 redis = "3.3.11"
 {%- if cookiecutter.use_celery == "y" %}
