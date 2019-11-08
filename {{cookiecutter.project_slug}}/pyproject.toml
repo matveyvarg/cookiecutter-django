@@ -94,4 +94,4 @@ django-anymail = { version = "7.0.0", extras = ["mailgun"] }
 
 
 [tool.poetry.dev-dependencies]
-pytest = "^3.4
+pytest = "^3.4"
