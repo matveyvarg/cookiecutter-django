@@ -86,11 +86,11 @@ sentry-sdk = "0.13.1"
 {%- endif %}
 
 {%- if cookiecutter.cloud_provider == 'AWS' %}
-django-storages[boto3] = "1.7.2"
+django-storages = { version = "1.7.2", extras = ["boto3"] }
 {%- elif cookiecutter.cloud_provider == 'GCP' %}
-django-storages[google] = "1.7.2"
+django-storages = { version = "1.7.2", extras = ["google"]
 {%- endif %}
-django-anymail[mailgun] = "7.0.0"
+django-anymail = { version = "7.0.0", extras = ["mailgun"] }
 
 
 [tool.poetry.dev-dependencies]
